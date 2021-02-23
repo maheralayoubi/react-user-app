@@ -1,5 +1,6 @@
 import React from "react";
-import UsersItem from "./UserItem";
+
+import UserItem from "./UserItem";
 import Card from "../../shared/components/UIElements/Card";
 import "./UsersList.css";
 
@@ -8,15 +9,16 @@ const UsersList = (props) => {
     return (
       <div className="center">
         <Card>
-          <h1>No users found.</h1>
+          <h2>No users found.</h2>
         </Card>
       </div>
     );
   }
+
   return (
     <ul className="users-list">
       {props.items.map((user) => (
-        <UsersItem
+        <UserItem
           key={user.id}
           id={user.id}
           image={user.image}
